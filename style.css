@@ -35,14 +35,14 @@ a:hover {
     text-decoration: underline;
 }
 
-.block1_lessons_practice
-.meet
-.about_us
-.percent_block
-.img_mission
-.comments
-.manager
-.contact_form
+.block1_lessons_practice,
+.meet,
+.about_us,
+.percent_block,
+.img_mission,
+.comments,
+.manager,
+.contact_form,
 .contact_container {
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ a:hover {
     position: relative;
 }
 
-.foto_header {
+.img_header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@ a:hover {
     position: relative;
 }
 
-.foto_header img {
+.img_header img {
     min-width: 320px;
     min-height: 320px;
     width: 55%;
@@ -73,7 +73,7 @@ a:hover {
     display: block;
 }
 
-.foto_header h1 {
+.img_header h1 {
     font-size: 2.2rem;
     color: #ffffff;
     position: absolute;
@@ -144,18 +144,18 @@ a:hover {
     
     .block1_lessons_practice {
         padding: 30px 15px;
-        width: 95%; /* Ocupa quase a largura total do ecrã */
+        width: 95%;
     }
 
     /* Transforma o bloco superior num fluxo vertical simples */
-    .foto_header {
+    .img_header {
         flex-direction: column;
         gap: 15px;
         max-width: 100%;
     }
 
     /* remove absolute */
-    .foto_header h1 {
+    .img_header h1 {
         font-size: 1.8rem; 
         white-space: normal; 
         position: static; 
@@ -163,7 +163,7 @@ a:hover {
         order: 1; 
     }
 
-    .foto_header img {
+    .img_header img {
         width: 200px;
         height: 200px;
         order: 2; 
