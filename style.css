@@ -43,7 +43,7 @@ a:hover {
 .manager,
 .contact_form,
 .comments,
-.contact_container {
+.block9_contacts{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .comments,
-.contact_container {
+.block9_contacts {
     background-color: #ffffff ;
 }
 
@@ -616,8 +616,6 @@ a:hover {
     gap: 40px; /* Controla o espaço exato entre o texto, a foto e o twitter */
     width: 100%;
 }
-
-/* 📦 CAIXA 1 (Texto): Limitado estritamente a 25% */
 .comments article {
     width: 25%;
     display: flex;
@@ -626,19 +624,17 @@ a:hover {
     flex-shrink: 0; /* Impede que o texto seja esmagado abaixo de 25% */
 }
 
-/* Alinhamento do texto para Marry e Rose (Texto na esquerda alinhado à direita) */
+/* (Texto na esquerda alinhado à direita) */
 .marry_rose article {
     text-align: right;
     align-items: flex-end;
 }
 
-/* Alinhamento do texto para o Nick (Texto na direita alinhado à esquerda) */
+/*  (Texto na direita alinhado à esquerda) */
 .nick article {
     text-align: left;
     align-items: flex-start;
 }
-
-/* 📦 CAIXA 2 (Moldura da Foto): Sempre centralizada no meio */
 .people {
     width: 160px; /* Ajustado para abraçar a imagem confortavelmente no centro */
     display: flex;
@@ -655,7 +651,7 @@ a:hover {
     object-position: left;
 }
 .marry_rose .people .marry_norton{
-    object-position: right;
+    object-position: right center;
 }
 
 .twitter {
@@ -721,16 +717,47 @@ a:hover {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;       
-    gap: 20px;          
-}
-.contact_card {
+    gap: 20px;
     flex: 0 0 calc((100% - 40px) / 3); 
     box-sizing: border-box; 
-    background-color: #f4f4f4;
-    padding: 10px;
+    flex-direction: row; 
+    margin-bottom: 2rem;        
+}
+
+.contact_card {
+    flex: 0 0 calc((100% - 40px) / 3); 
+    background-color: #3b46e3;
+    padding: 15px;
     border-radius: 8px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Empurra a imagem para o fundo se houver espaço */
+}
+.contact_card h3 {
+    
+    color:  #ffffff;
+}
+.contact_card span {
+    color:  #ffffff;
+    font-size: 0.6rem;
+}
+.contact_card img {
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+    padding-top: 5px; 
+}
+ .freepik4 {
+    width: 100;
+    display: block;
+    margin: 0 auto;
+    text-align: center;  
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+.freepik4 a {
+    text-decoration: underline;
+    font-size: 0.6rem;
 }
