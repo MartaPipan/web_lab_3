@@ -39,10 +39,10 @@ a:hover {
 .meet,
 .about_us,
 .percent_block,
-.img_mission,
-.comments,
+.container_mission,
 .manager,
 .contact_form,
+.comments,
 .contact_container {
     display: flex;
     flex-direction: column;
@@ -57,6 +57,12 @@ a:hover {
     position: relative;
 }
 
+.comments,
+.contact_container {
+    background-color: #ffffff ;
+}
+
+
 .img_header {
     display: flex;
     align-items: center;
@@ -69,7 +75,7 @@ a:hover {
 .img_header img {
     min-width: 250px;
     min-height: 250px;
-    width: 70%;
+    width: 65%;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -105,15 +111,15 @@ a:hover {
     justify-content: center;
     gap: 5px;
     background: #ffffff;
-    padding: 10px 0px;
+    padding: 15px 12px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     aspect-ratio: 5/4; 
 }
 
 .icon img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: rgb(251, 172, 76);
     padding: 10px;
     border-radius: 50%;
@@ -126,20 +132,47 @@ a:hover {
     font-weight: 700;
 }
 
-.freepik {
-    grid-column: 3; 
-    text-align: right;
+    .grid_icons > :last-child {
+    grid-column: 1 / -1; 
+    text-align: right;   
     margin-top: 10px; 
     font-size: 0.6rem;
     color: #ffffff;
     opacity: 0.8;
 }
 
-.freepik a {
+/* if freepik in GRID-BLOCK
+   in center      
+   .freepik {
+    grid-column: 3; 
+    text-align: right;
+    margin-top: 10px; 
+    font-size: 0.6rem;
+    color: #ffffff;
+    opacity: 0.8;  
+}  */ 
+
+
+/* .freepik1 {
+    width: 65%;
+    display: block;
+    margin-left: auto;   
+    text-align: right;  
+    margin-top: 20px;  
+    font-size: 0.6rem;
+    color: #ffffff;
+    opacity: 0.8;
+}
+*/
+.freepik1 a {
     color: #fff;
     text-decoration: underline;
     font-size: 0.6rem;
 }
+
+
+
+
 
 /* Ativa estas regras apenas em ecrãs com menos de 768px de largura */
 @media (max-width: 768px) {
@@ -214,7 +247,7 @@ a:hover {
     border-radius: 10px;
     min-width: 80px;
     box-sizing: border-box;
-}
+} 
 .partners img {
     display: block;
     width: 100%;
@@ -251,10 +284,10 @@ a:hover {
 }
 .freepik {
     margin-top: 20px;
-    background-color:#495bfefb;
     font-style: italic;
     text-align: center;
-
+    width: 65%;
+    display: block;
 }
 .freepik a {
     color: #fff;
@@ -282,11 +315,8 @@ a:hover {
     );
 }
 
-
-
-
-
-/* .block6-container {
+/* GRID  solution
+.block6-container {
     width: 60%;
     margin: 0 auto;
    
@@ -328,7 +358,9 @@ a:hover {
     justify-self: end;  
     align-self: end;    
 }
-    */
+*/
+
+
 
 .block6-container {
     width: 60%;
@@ -458,11 +490,12 @@ a:hover {
 }
 
 
-.percent_info button {
+.percent_info button,
+.mission button {
     background-color: #ffb700;
     color: #3b46e3;
     text-decoration: none;
-    padding: 8px 25px;
+    padding: 10px 30px;
     border-radius: 25px;
     font-size: 0.6rem;
     text-transform: uppercase;
@@ -471,3 +504,233 @@ a:hover {
 }
 
 
+/*block 5   */
+
+.container_mission {
+     background: linear-gradient(
+        to bottom, 
+        #495bfefb 0%,   
+        #495bfefb 60%,   
+        #ffffff 60%,   
+        #ffffff 100%   
+    );
+}
+
+.img_mission {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 700px;
+    position: relative;
+    padding-left: 10rem;
+}
+
+.img_mission img {
+    min-width: 250px;
+    min-height: 250px;
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.mission  h3{
+    font-size: 1.2rem;
+    color: #2d2929;
+    border-radius: 10px;
+}
+
+.mission {
+    /* 1. Posicionamento e Sobreposição  */
+    position: relative; 
+    z-index: 2;          /* Garante que fica à frente da foto */
+    margin-top: -230px;  /* Sobe o bloco para cima da imagem */
+    margin-right: 16rem;
+    width: 23%;          /* Define a largura do cartão */
+
+    /* 2. Comportamento Flexbox (Para alinhar o conteúdo interno à esquerda) */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha todos os elementos à esquerda */
+    justify-content: center; /* Centraliza o conteúdo verticalmente dentro do cartão */
+    gap: 7px;
+
+    /* 3. Estilização do Cartão Branco */
+    background: #ffffff;
+    padding:0 25px ;           /* Corrigido: 10px em todos os lados para afastar o texto da borda */
+    border-radius: 10px;
+    /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);*/
+    aspect-ratio: 5/4;       /* Mantém a proporção do bloco */
+    box-sizing: border-box;  /* Garante que o padding não quebre o tamanho do bloco */
+}
+
+/* Garante que os textos e links lá dentro alinhem à esquerda e caibam no espaço */
+.mission h3, 
+.mission p,
+.freepik3 {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    color: #898888;
+    font-weight: 500;
+}
+.mission h3{
+    color: #111;
+    font-size: 1.5rem;
+
+}
+.freepik3 {
+    font-style:italic;
+}
+.freepik3 a {
+    color: #898888;
+    text-decoration: underline;
+    font-size: 0.6rem;
+}
+.mission button {
+    margin-top: 10px;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+
+/*  block6    */
+
+/* Container Geral do Bloco 6 */
+.comments {
+    display: flex;
+    width: 100%; /* Permite expansão total para centralizar os blocos */
+    flex-direction: column;
+    gap: 60px; /* Distância uniforme entre as 3 linhas */
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+/* Estrutura base para todas as linhas - CENTRALIZADO */
+.marry_rose, .nick {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* MUDADO: Força tudo a se alinhar a partir do centro */
+    gap: 40px; /* Controla o espaço exato entre o texto, a foto e o twitter */
+    width: 100%;
+}
+
+/* 📦 CAIXA 1 (Texto): Limitado estritamente a 25% */
+.comments article {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Impede que o texto seja esmagado abaixo de 25% */
+}
+
+/* Alinhamento do texto para Marry e Rose (Texto na esquerda alinhado à direita) */
+.marry_rose article {
+    text-align: right;
+    align-items: flex-end;
+}
+
+/* Alinhamento do texto para o Nick (Texto na direita alinhado à esquerda) */
+.nick article {
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* 📦 CAIXA 2 (Moldura da Foto): Sempre centralizada no meio */
+.people {
+    width: 160px; /* Ajustado para abraçar a imagem confortavelmente no centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.people img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fcbd1e;
+    object-fit: cover;
+    object-position: left;
+}
+.marry_rose .people .marry_norton{
+    object-position: right;
+}
+
+.twitter {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.marry_rose .twitter {
+    justify-content: flex-start; 
+}
+
+.nick .twitter {
+    justify-content: flex-end; 
+}
+.twitter img {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+}
+.comments h3 {
+    color: #3b46e3;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.comments p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #555353;
+    margin: 0;
+}
+.comments p a {
+    color: #3b46e3;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* block9  */
+.contact_container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 20px;          
+}
+.contact_card {
+    flex: 0 0 calc((100% - 40px) / 3); 
+    box-sizing: border-box; 
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra a imagem para o fundo se houver espaço */
+}
