@@ -185,15 +185,19 @@ a:hover {
 }
 
 /*Block2 */
-.meet h2 {
+.meet h2,
+.about_us h2 {
     color:#ffffff;
     font-size: 1.8rem;
+    line-height: 1.8rem;
 }
-.meet p {
+.meet p,
+.about_us p {
     width: 30%;
     color:#ffffff;
     font-size: 0.7rem;
     padding: 5px 0 25px 0;
+    line-height: 1rem;
 }
 
 .meet_block {
@@ -218,8 +222,6 @@ a:hover {
     object-fit: cover;
     border-radius: 10px; 
 }
-
-/* Padronização dos títulos dentro dos cards */
 .partners h3 {
     color: #555353;
     font-size: 1rem;
@@ -260,3 +262,68 @@ a:hover {
     font-size: 0.6rem;
 }
 
+/*BLOCK3 */
+.about_us h2{
+    width: 45%;
+}
+.about_us p {
+    width: 45%;
+}
+
+.about_us {
+     background: linear-gradient(
+        to bottom, 
+        #495bfefb 0%,    /* Início do primeiro bloco azul */
+        #495bfefb 40%,   /* Fim do azul aos 25% */
+        #fcbd1e 40%,   /* Início do amarelo (linha nítida) */
+        #fcbd1e 85%,   /* Fim do amarelo aos 75% (ocupando 50% de espaço) */
+        #495bfefb 85%,   /* Início do segundo bloco azul (linha nítida) */
+        #495bfefb 100%   /* Fim do bloco azul */
+    );
+}
+.block6-container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;       /* Permite que os itens quebrem para a linha seguinte */
+    gap: 20px;          
+}
+.block_element {
+    /* calc((100% - total_de_espaçamentos) / numero_de_colunas) */
+    flex: 0 0 calc((100% - 40px) / 3); 
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.block_element h3 {
+    margin-top: 0;
+}
+
+.block_element p {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+    color: #555353;
+}
+
+@media (max-width: 992px) {
+    .block6-container {
+        width: 80%;
+    }
+    .block_element {
+        flex: 0 0 calc((100% - 20px) / 2); 
+    }
+}
+
+@media (max-width: 600px) {
+    .block6-container {
+        width: 90%; 
+        gap: 15px; 
+    }
+    .block_element {
+        flex: 0 0 100%; 
+    }
+}
