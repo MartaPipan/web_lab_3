@@ -60,6 +60,7 @@ a:hover {
 }
 
 .comments,
+.contact_form,
 .block9_contacts {
   background-color: #ffffff;
 }
@@ -552,9 +553,11 @@ a:hover {
   color: #898888;
   font-weight: 500;
 }
-.mission h3 {
+.mission h3,
+.submit_form h3 {
   color: #111;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 .freepik3 {
   font-style: italic;
@@ -667,6 +670,7 @@ a:hover {
 
 /* block7*/
 .photoblock{
+    min-width: 250px;
     display: grid;
     justify-items: center;
     margin-bottom: -50px;
@@ -696,6 +700,7 @@ a:hover {
 .manager > p:first-of-type{
     background-color: #ffffff;
     width: 50%;
+    min-width: 250px;
     padding: 80px 40px 40px 40px;
     border-radius: 12px;
     color: #4953e4;
@@ -714,18 +719,121 @@ a:hover {
     color: #ffffff;
     font-weight: 700;
 }
-.freepik5 {
-    color: #ffffff;
-    font-weight: 100px;
+
+.manager div:last-of-type p:nth-last-child(1),
+.manager div:last-of-type p:nth-last-child(1) a  {
+    font-weight: 100;
     font-style: italic;
     font-size: 0.7rem;
 }
-.freepik5 a{
-    color: #ffffff;
-    text-decoration: underline;
 
+/*  block8 */
+.contact_form {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
 }
+.contact_form > img {
+    width: 35%;
+    min-width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+.submit_form {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.submit_form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+.submit_form h3 {
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    width: 50%;
+}
+.form_group label {
+    font-size: 0.8rem;
+    color: #67696a;
+    font-weight: 600;
+    
+}
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c5bebe ;
+    padding: 5px;
+    font-size: 0.6rem;
+    color: #b9b3b3;
+    background-color: transparent;
+    outline: none;
+}
+.form_group textarea {
+    min-height: 80px;
+}
+.form_group input:focus,
+.form_group textarea:focus {
+    border-bottom: 1px solid #5e5959;
+}
+.terms_service {
+    display: flex;
+    align-items: center;
+    gap:8px;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    color:#494848;
+}
+.terms_service input {
+    cursor: pointer;
+}
+.terms_service a{
+    color: #4953e4;
+}
+.submit_button {
+    text-align: center;
+    align-self: flex-start;
+    width: 50%;
+    background-color: #4953e4;
+    color: #ffffff;
+    border:none;
+    padding: 14px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor:pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+.submit_button :hover {
+    background-color: #1e2d8a;
+}
+@media (max-width: 768px){
+    .contact_form{
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
+    }
+    .contact_form > img {
+        width: 100%;
+    }
 
+    
+}
+ 
 
 
 
@@ -766,6 +874,8 @@ a:hover {
 }
 .contact_card h3 {
   color: #ffffff;
+  font-size: 1rem;
+  padding-bottom: 8px;
 }
 .contact_card span {
   color: #ffffff;
@@ -783,10 +893,10 @@ a:hover {
   margin: 0 auto;
   text-align: center;
   font-size: 0.6rem;
-  opacity: 0.8;
 }
 
 .freepik4 a {
   text-decoration: underline;
-  font-size: 0.6rem;
+  color: #2d2929;
 }
+
