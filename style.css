@@ -830,25 +830,8 @@ a:hover {
     .contact_form > img {
         width: 100%;
     }
-
-    
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* block9  */
 .contact_container {
   width: 60%;
@@ -918,4 +901,15 @@ a:hover {
     max-width: 700px;
     margin: 0 auto;
     color: #efe4e4;
+}
+
+.footer_container p:nth-last-of-type(1) {
+    font-size: 0.6rem;
+}
+
+
+.footer .footer_container a {
+  font-size: 0.6rem;
+  color: #ffffff;
+  text-decoration: underline;
 }
